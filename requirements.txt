@@ -1,0 +1,13 @@
+Flask
+Werkzeug
+nltk
+gensim
+pyvi
+datasets
+evaluate
+scikit-learn
+numpy
+python-docx
+pymupdf
+pytesseract
+pillow
