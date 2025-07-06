@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Summary</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/icons/themify-icons/themify-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>UET SUMMARIZER</header>
+    <div class="box">
+      <div id="input">
+        <p>Summarizer</p>
+        <textarea
+          id="input-text"
+          placeholder="Enter your input text here..."
+          required
+          onfocus="clearPlaceholder()"
+          onblur="addPlaceholder()"
+        ></textarea>
+        <ul>
+          <li class="btn-upload" style="font-size: 14px">
+            <label for="file-upload">
+              <i class="ti-upload delete-button"></i>
+              Upload
+            </label>
+            <input
+              type="file"
+              id="file-upload"
+              accept=".docx,.pdf"
+              style="display: none"
+              onchange="handleFileUpload(this.files)"
+            />
+            <span id="filename"></span>
+          </li>
+          <li>
+            <select id="length-select">
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn-container">
+        <button id="btn-ph">Summarize Now</button>
+      </div>
+
+      <div id="output">
+        <p>Summarized Text</p>
+        <textarea id="summary-output" disabled></textarea>
+        <ul>
+          <li>
+            <i class="ti-panel js-panel"></i>
+          </li>
+          <li id="download-button">
+            <i class="ti-download"></i>
+          </li>
+          <li id="copy-button">
+            <!-- <i class="ti-layers"></i> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal js-modal">
+      <div class="modal-container">
+        <div class="modal-close js-modal-close">
+          <i class="ti-close"></i>
+        </div>
+
+        <header class="modal-header">Statistics</header>
+
+        <div class="modal-body">
+          <div class="word-count" data-value="0">
+            <p>Word Count</p>
+            <ul class="number">
+              <li class="one">0</li>
+              <li><i class="ti-arrow-right"></i></li>
+              <li>0</li>
+            </ul>
+            <ul class="from-to">
+              <li class="from">From</li>
+              <li>To</li>
+            </ul>
+          </div>
+          <div class="characters" data-value="0">
+            <p>Characters</p>
+            <ul class="number">
+              <li class="one">0</li>
+              <li><i class="ti-arrow-right"></i></li>
+              <li>0</li>
+            </ul>
+            <ul class="from-to">
+              <li class="from">From</li>
+              <li>To</li>
+            </ul>
+          </div>
+          <div class="reduction" data-value="0">
+            <p>Content Score: 0%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
