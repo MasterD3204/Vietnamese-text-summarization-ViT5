@@ -23,7 +23,10 @@ Một trang web giúp tóm tắt các đoạn văn bản tiếng Việt, đượ
 Mục tiêu của dự án là cung cấp một giao diện web thân thiện, cho phép bất kỳ ai cũng có thể dễ dàng tóm tắt văn bản mà không cần kiến thức kỹ thuật.
 
 ## Demo
+Giao diện web
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/8cf863eb-a7f2-4139-b5dd-7b7447c99674" />
 
+link video demo: https://drive.google.com/file/d/1XDE1lzYar-y2-FSblhoSXikClaZ85rbr/view?usp=sharing
 
 
 ## Các tính năng chính
