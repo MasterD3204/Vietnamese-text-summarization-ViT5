@@ -15,9 +15,6 @@ Một trang web giúp tóm tắt các đoạn văn bản tiếng Việt, đượ
 6. [Chi tiết về Mô hình](#chi-tiết-về-mô-hình-vit5-fine-tuned)
 7. [Cấu trúc thư mục](#cấu-trúc-thư-mục)
 8. [Hạn chế & Hướng phát triển](#hạn-chế--hướng-phát-triển)
-9. [Đóng góp](#đóng-góp)
-10. [Giấy phép](#giấy-phép)
-11. [Liên hệ](#liên-hệ)
 
 ## Giới thiệu
 
@@ -77,7 +74,7 @@ Sau đó vào file index.html và go live.
 
 Đây là phần quan trọng nhất của dự án.
 
-*   **Mô hình gốc (Base Model):** `[VietAI/vit5-base]`
+*   **Mô hình gốc (Base Model):** `VietAI/vit5-base`
 *   **Dữ liệu Fine-tune:**
     *   **Tên bộ dữ liệu:** vietgpt/news_summarization_vi
     *   **Mô tả:** `Bộ dữ liệu này chứa các cặp bài báo và tóm tắt của chúng, được thu thập từ các trang tin tức uy tín tại Việt Nam.`
@@ -88,8 +85,8 @@ Sau đó vào file index.html và go live.
         *   Learning rate: `5e-5`
         *   Số epochs: `3`
         *   Batch size: `4`
-        *   warmup_ratio: '0.05',
-        *   weight_decay: '0.01',
+        *   warmup_ratio: `0.05`,
+        *   weight_decay: `0.01`,
 *   **Đánh giá (Evaluation):**
     *   Mô hình được đánh giá trên tập test của bộ dữ liệu bằng chỉ số **ROUGE**.
     *   **ROUGE-1:** `76.19`
